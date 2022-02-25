@@ -3,17 +3,18 @@ from behave import given, when, then
 from time import sleep
 
 @given('Open Amazon Home Page')
-def open_google(context):
+def open_amazon(context):
     context.driver.get('https://www.amazon.com/')
 
 
 @when('Click cart button')
-def click_search_icon(context):
+def click_cart_button(context):
     context.driver.find_element(By.ID, 'nav-cart-count-container').click()
     sleep(1)
 
+
 @then('Verify if empty cart message')
-def verify_found_results_text(context):
+def verify_empty_cart(context):
     actual_result = context.driver.find_element(By.XPATH, "//div[@class='a-row sc-your-amazon-cart-is-empty']/h2").text
     expected_result = 'Your Amazon Cart is empty'
 

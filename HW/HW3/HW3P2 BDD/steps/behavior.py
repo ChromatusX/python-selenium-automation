@@ -5,18 +5,19 @@ from selenium.webdriver.common.keys import Keys
 
 
 @given('Open Amazon help page')
-def open_google(context):
+def open_amazon_help(context):
     context.driver.get('https://www.amazon.com/gp/help/customer/display.html')
 
 
 @when('Search for Cancel order')
-def click_search_icon(context):
+def search_cancel_order(context):
     context.driver.find_element(By.ID, 'helpsearch').send_keys('Cancel Order')
     context.driver.find_element(By.ID, 'helpsearch').send_keys(Keys.RETURN)
     sleep(1)
 
+
 @then('Verify if help page')
-def verify_found_results_text(context):
+def verify_help_page(context):
     actual_result = context.driver.find_element(By.XPATH, "//div[@class='help-content']/h1").text
     expected_result = 'Cancel Items or Orders'
 

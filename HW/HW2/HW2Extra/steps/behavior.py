@@ -8,13 +8,13 @@ SEARCH_SUBMIT = (By.NAME, 'btnK')
 
 
 @given('Open Amazon home page')
-def open_google(context):
+def open_amazon(context):
     context.driver.get('https://www.amazon.com/')
 
 
 
 @when('Click on returns and orders')
-def click_search_icon(context):
+def click_returns_orders(context):
     context.driver.find_element(By.ID, 'nav-orders').click()
 
     sleep(1)
