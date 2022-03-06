@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 @given('Open Amazon bestseller page')
 def open_amazon_bestseller(context):
     context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
-    sleep(2)
+
 
 @then('Check for links')
 def check_links(context):

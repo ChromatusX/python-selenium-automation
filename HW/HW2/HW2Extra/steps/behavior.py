@@ -12,12 +12,9 @@ def open_amazon(context):
     context.driver.get('https://www.amazon.com/')
 
 
-
 @when('Click on returns and orders')
 def click_returns_orders(context):
     context.driver.find_element(By.ID, 'nav-orders').click()
-
-    sleep(1)
 
 
 @then('Verify Sign in page')

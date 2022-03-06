@@ -13,7 +13,6 @@ def open_amazon_help(context):
 def search_cancel_order(context):
     context.driver.find_element(By.ID, 'helpsearch').send_keys('Cancel Order')
     context.driver.find_element(By.ID, 'helpsearch').send_keys(Keys.RETURN)
-    sleep(1)
 
 
 @then('Verify if help page')

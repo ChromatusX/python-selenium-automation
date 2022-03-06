@@ -10,7 +10,6 @@ def open_amazon(context):
 @when('Click cart button')
 def click_cart_button(context):
     context.driver.find_element(By.ID, 'nav-cart-count-container').click()
-    sleep(1)
 
 
 @then('Verify if empty cart message')
