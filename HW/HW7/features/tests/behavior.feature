@@ -10,4 +10,4 @@ Feature: Page Object Pattern Scenarios
   Scenario: User can check if cart is empty
         Given Open Amazon Home Page
         When Click cart button
-        Then Verify if empty cart message
+        Then Verify Your Amazon Cart is empty text present

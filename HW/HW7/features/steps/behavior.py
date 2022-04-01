@@ -23,9 +23,8 @@ def click_cart_button(context):
     context.driver.find_element(By.ID, 'nav-cart-count-container').click()
 
 
-@then('Verify if empty cart message')
-def verify_empty_cart(context):
-    expected_result = 'Your Amazon Cart is empty'
+@then('Verify {expected_result} text present')
+def verify_empty_cart(context, expected_result):
     context.app.verification.verify_empty_cart(expected_result)
     print("Test case 2 pass")
 
