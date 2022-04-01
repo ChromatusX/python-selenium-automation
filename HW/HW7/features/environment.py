@@ -1,5 +1,6 @@
 from selenium import webdriver
-from app.application import Application
+from HW.HW7.app.Application import Application
+
 
 def browser_init(context):
     """
